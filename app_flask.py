@@ -7,7 +7,8 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 app = Flask(__name__)
 
-fichier_pickle = r"C:\Users\BADR\Documents\ML Classroom\data\model.pickle"
+fichier_pickle = r"model.pickle"
+
 with open(fichier_pickle, 'rb') as fichier_grid_search_logit:
         grid_search_logit = pickle.load(fichier_grid_search_logit)
 
