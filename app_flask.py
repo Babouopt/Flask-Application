@@ -18,14 +18,7 @@ def welcome():
 
 @app.route('/predict_tags/<string:question>')
 def predict_tags(question):
-    fichier_pickle = r"C:\Users\BADR\Documents\ML Classroom\data\X_sbert_co.pickle"
-    with open(fichier_pickle, 'rb') as fichier_sbert:
-        X_sbert = pickle.load(fichier_sbert)
-
-    fichier_pickle = r"C:\Users\BADR\Documents\ML Classroom\data\y_binarized.pickle"
-    with open(fichier_pickle, 'rb') as fichier_y_binarized:
-        y_binarized = pickle.load(fichier_y_binarized)
-
+   
     from sentence_transformers import SentenceTransformer
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
