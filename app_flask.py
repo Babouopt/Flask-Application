@@ -28,7 +28,7 @@ def predict_tags(question):
     # Prediction
     y_test_predicted_labels_sbert = grid_search_logit.predict(Question_sbert)
 
-    fichier_pickle = r"C:\Users\BADR\Documents\ML Classroom\data\MultiLabelBinarizer.pickle"
+    fichier_pickle = r"MultiLabelBinarizer.pickle"
     with open(fichier_pickle, 'rb') as fichier_MultiLabelBinarizer:
         multilabel_binarizer = pickle.load(fichier_MultiLabelBinarizer)
 
