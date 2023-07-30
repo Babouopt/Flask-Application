@@ -3,6 +3,7 @@ from flask import Flask, jsonify
 import numpy as np
 import sklearn
 from sklearn.preprocessing import MultiLabelBinarizer
+from sentence_transformers import SentenceTransformer
 
 
 app = Flask(__name__)
@@ -19,7 +20,6 @@ def welcome():
 @app.route('/predict_tags/<string:question>')
 def predict_tags(question):
    
-    from sentence_transformers import SentenceTransformer
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
     # Extraction des représentations vectorielles pour les phrases
